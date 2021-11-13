@@ -29,15 +29,15 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication
-$mail->Username = "teddysetiadi851@gmail.com";
+$mail->Username = "";
 //Password to use for SMTP authentication
-$mail->Password = "081396030709";
+$mail->Password = "";
 //Set who the message is to be sent from
-$mail->setFrom('teddysetiadi850@gmail.com', 'First Last');
+$mail->setFrom('', 'First Last');
 //Set an alternative reply-to address
-$mail->addReplyTo('teddysetiadi850@gmail.com', 'First Last');
+$mail->addReplyTo('', 'First Last');
 //Set who the message is to be sent to
-$mail->addAddress('teddysetiadi850@gmail.com', 'teddy');
+$mail->addAddress('', 'teddy');
 //Set the subject line
 $mail->Subject = 'PHPMailer SMTP test';
 //Read an HTML message body from an external file, convert referenced images to embedded,
