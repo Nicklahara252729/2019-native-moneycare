@@ -37,7 +37,7 @@ $mail->setFrom('', 'First Last');
 //Set an alternative reply-to address
 $mail->addReplyTo('', 'First Last');
 //Set who the message is to be sent to
-$mail->addAddress('', 'teddy');
+$mail->addAddress('', '');
 //Set the subject line
 $mail->Subject = 'PHPMailer SMTP test';
 //Read an HTML message body from an external file, convert referenced images to embedded,
