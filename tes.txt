@@ -1,0 +1,45 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Feb 19, 2019 at 03:51 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `login`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `username` varchar(50) NOT NULL,
+  `pass` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`username`, `pass`) VALUES
+('1', '1'),
+('cin', '81dc9bdb52d04dc20036dbd8313ed055'),
+('kasar', '202cb962ac59075b964b07152d234b70');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`username`);

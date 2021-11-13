@@ -1,0 +1,256 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 02, 2019 at 08:18 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `secondpt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `balas`
+--
+
+CREATE TABLE `balas` (
+  `id_balas` int(11) NOT NULL,
+  `dari` varchar(50) NOT NULL,
+  `kepada` varchar(50) NOT NULL,
+  `pesan` varchar(255) NOT NULL,
+  `tanggal` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `balas`
+--
+
+INSERT INTO `balas` (`id_balas`, `dari`, `kepada`, `pesan`, `tanggal`) VALUES
+(1, 'Admin', 'wanmuhammaderlangga1@gmail.com', 'mau duit gk mau usaha\r\nmati aja uda ko\r\n', '27-02-19'),
+(2, 'Admin Ganteng', 'wanmuhammaderlangga1@gmail.com', 'gk usa banyak kali gaya kau anjeng!!!\r\n\r\nlaptop sama hp aja blm lunas\r\n', '27-02-19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bantuan`
+--
+
+CREATE TABLE `bantuan` (
+  `id_bantu` int(11) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tanggal` varchar(15) NOT NULL,
+  `deskripsi` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bantuan`
+--
+
+INSERT INTO `bantuan` (`id_bantu`, `email`, `nama`, `tanggal`, `deskripsi`) VALUES
+(1, 'yudhaandika16@gmail.com', 'tedy', '26-02-19', 'gk tau lah capek kali bikin web klen tapi demi hp baru gpp lah\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `daftar`
+--
+
+CREATE TABLE `daftar` (
+  `nik` int(20) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `no_rek` varchar(20) DEFAULT NULL,
+  `Fktp` varchar(255) DEFAULT NULL,
+  `Frek` varchar(255) DEFAULT NULL,
+  `tempat_lahir` varchar(20) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `nama_ibu` varchar(35) NOT NULL,
+  `status` varchar(11) NOT NULL,
+  `nama_bank` varchar(35) NOT NULL,
+  `cabang_pembuka` varchar(35) NOT NULL,
+  `nama_pemilik` varchar(50) NOT NULL,
+  `nomor_darurat` int(13) NOT NULL,
+  `no_hp` int(15) NOT NULL,
+  `tgl_bergabung` varchar(20) NOT NULL,
+  `harga_dolar` int(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `daftar`
+--
+
+INSERT INTO `daftar` (`nik`, `nama`, `alamat`, `email`, `no_rek`, `Fktp`, `Frek`, `tempat_lahir`, `tanggal_lahir`, `nama_ibu`, `status`, `nama_bank`, `cabang_pembuka`, `nama_pemilik`, `nomor_darurat`, `no_hp`, `tgl_bergabung`, `harga_dolar`) VALUES
+(23456789, 'teddy', 'gaperta', 'caulia569@gmail.com', '8778', 'desain ayam penyet om bg.jpg', 'Capture.PNG', 'medan', '2019-12-24', 'Bambang', 'Single', 'Mandiri', 'erguhij', 'asfguh', 23456, 12345678, '28 02 2019', 10000),
+(1812000031, 'teddy', 'jl.ampera timur no k.537', 'teddysetiadi850@gmail.com', '1238888882321', 'om candra.jpg', 'logo pu.jpg', 'medan', '2000-01-27', 'Andika', 'Single', 'BNI', 'Medan Sunggal', 'Teddy', 2147483647, 2147483647, '01 03 2019', 12000),
+(1812000038, 'Yudha Andhika Rahman', 'Medan', 'yudhaandika16@gmail.com', '876647465465', 'bgr 6.PNG', 'Capture.PNG', 'Medan', '2000-08-17', 'Bambang', 'Single', 'Mandiri', 'Medan Sunggal', 'Andhika', 2147483647, 2147483647, '01 03 2019', 10000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `deposit`
+--
+
+CREATE TABLE `deposit` (
+  `id_depo` int(11) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `F_Struk` varchar(255) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tgl_depo` varchar(15) NOT NULL,
+  `nominal` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `deposit`
+--
+
+INSERT INTO `deposit` (`id_depo`, `email`, `F_Struk`, `nama`, `tgl_depo`, `nominal`) VALUES
+(3, 'yudhaandika16@gmail.com', '(=u)lk$ygbr 2.PNG', 'Andhika', '26-02-19', 0),
+(4, 'yudhaandika16@gmail.com', 'eB(Q=A97gbr 2.PNG', 'Andhika', '26-02-19', 0),
+(5, 'wanmuhammaderlangga1@gmail.com', 'Yan1bMX9logo pu.jpg', 'wan', '27-02-19', 10000000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `password` varchar(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `active` varchar(35) NOT NULL,
+  `level` varchar(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`password`, `user_id`, `email`, `active`, `level`) VALUES
+('81dc9bdb52d04dc20036dbd8313ed055', 22, 'cindy', 'yes', 'admin'),
+('76d80224611fc919a5d54f0ff9fba446', 42, 'teddy', 'yes', 'admin'),
+('8c8d357b5e872bbacd45197626bd5759', 43, 'teddysetiadi850@gmail.com', 'yes', 'user'),
+('a738e3ac4808b0374613970e87b80bcb', 44, 'yudhaandika16@gmail.com', 'yes', 'user');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_admin`
+--
+
+CREATE TABLE `tb_admin` (
+  `user` varchar(50) NOT NULL,
+  `pass` varchar(255) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `priviledge` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tb_admin`
+--
+
+INSERT INTO `tb_admin` (`user`, `pass`, `name`, `email`, `priviledge`) VALUES
+('admin', '$2y$10$ggxmazeAZOoioEnq4mLXSeLvn404IewZ29AoF7vzZwYuTRqu6AUPK', 'Administrator', 'admin@localhost', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_admin_log`
+--
+
+CREATE TABLE `tb_admin_log` (
+  `id` int(11) NOT NULL,
+  `tgl` datetime DEFAULT NULL,
+  `expired` datetime DEFAULT NULL,
+  `token` varchar(40) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
+  `ip` varchar(20) DEFAULT NULL,
+  `useragent` varchar(150) DEFAULT NULL,
+  `stat` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `balas`
+--
+ALTER TABLE `balas`
+  ADD PRIMARY KEY (`id_balas`);
+
+--
+-- Indexes for table `bantuan`
+--
+ALTER TABLE `bantuan`
+  ADD PRIMARY KEY (`id_bantu`);
+
+--
+-- Indexes for table `daftar`
+--
+ALTER TABLE `daftar`
+  ADD PRIMARY KEY (`nik`);
+
+--
+-- Indexes for table `deposit`
+--
+ALTER TABLE `deposit`
+  ADD PRIMARY KEY (`id_depo`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `tb_admin`
+--
+ALTER TABLE `tb_admin`
+  ADD PRIMARY KEY (`user`);
+
+--
+-- Indexes for table `tb_admin_log`
+--
+ALTER TABLE `tb_admin_log`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `balas`
+--
+ALTER TABLE `balas`
+  MODIFY `id_balas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `bantuan`
+--
+ALTER TABLE `bantuan`
+  MODIFY `id_bantu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `deposit`
+--
+ALTER TABLE `deposit`
+  MODIFY `id_depo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+--
+-- AUTO_INCREMENT for table `tb_admin_log`
+--
+ALTER TABLE `tb_admin_log`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

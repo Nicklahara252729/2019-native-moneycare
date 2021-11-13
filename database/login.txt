@@ -1,0 +1,97 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 19 Feb 2019 pada 15.25
+-- Versi Server: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `secondpt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `daftar`
+--
+
+CREATE TABLE `daftar` (
+  `nik` int(20) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `alamat` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `no_rek` varchar(20) DEFAULT NULL,
+  `Fktp` varchar(255) DEFAULT NULL,
+  `Frek` varchar(255) DEFAULT NULL,
+  `tempat_lahir` varchar(20) NOT NULL,
+  `tanggal_lahir` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `daftar`
+--
+
+INSERT INTO `daftar` (`nik`, `username`, `nama`, `alamat`, `email`, `no_rek`, `Fktp`, `Frek`, `tempat_lahir`, `tanggal_lahir`) VALUES
+(0, 'pas', '', '', '', '', '', '', '', '0000-00-00'),
+(3123, '', 'awdawd', 'qwdeqwd', 'adawd', '12312', 'Chrysanthemum.jpg', 'Jellyfish.jpg', 'qwe', '2019-02-19'),
+(662626, '1', 'hantu', 'kodam juga', 'gihghiu', '8765678', 'Koala.jpg', 'Desert.jpg', 'gkmay', '2019-02-19'),
+(1234412, '', 'anto', 'kodam', 'teddysetiadi160@yahoo.co.id', '12321312', 'Penguins.jpg', 'Desert.jpg', 'medan', '0000-00-00'),
+(7123123, '', 'sadas', 'asdasd', 'hjgjhhjv', '768968', 'Tulips.jpg', 'Jellyfish.jpg', 'uhkj', '2019-02-07'),
+(7676886, '', 'sadas', 'asdasd', 'hjgjhhjv', '768968', 'Tulips.jpg', 'Jellyfish.jpg', 'uhkj', '2019-02-07'),
+(2147483647, '', 'Teddy', 'kodam', 'teddysetiadi160@yahoo.co.id', '12321312', 'Penguins.jpg', 'Desert.jpg', 'medan', '2019-02-19');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `login`
+--
+
+CREATE TABLE `login` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `no_tel` int(15) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nickname` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `login`
+--
+
+INSERT INTO `login` (`username`, `password`, `user_id`, `no_tel`, `email`, `nickname`) VALUES
+('asd', '8c8d357b5e872bbacd45197626bd5759', 16, 123, 'teddyasd', 123),
+('pas', 'c3b830f9a769b49d3250795223caad4d', 17, 98765, 'kjihgvcfvghj', 0),
+('1', 'c4ca4238a0b923820dcc509a6f75849b', 18, 23423, 'asdas', 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `daftar`
+--
+ALTER TABLE `daftar`
+  ADD PRIMARY KEY (`nik`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `user_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
